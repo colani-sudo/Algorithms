@@ -10,17 +10,17 @@ void isPalindrome(vector<string> str){
         if(s.length() < 2){     //verify if each string is valid
             isPal = false;
         } else {
-            int mid = s.length()/2;
-            int rev = s.length() -1;
-            for(int i=0; i < mid; i++){
-                if(s[i] != s[rev]){
-                    isPal = false;
+            int mid = s.length()/2; //get half size of string
+            int rev = s.length() -1;    //get full size of string
+            for(int i=0; i < mid; i++){ //loop through the string
+                if(s[i] != s[rev]){         //compare string from front and from back towards midble
+                    isPal = false;          //set isPal to false if the is a mismatch
                 }   
-            --rev;
+            --rev;                          //loop backwards string
             }
         }
-        string result = (isPal)? "true": "false";
-            cout<<result<<endl;
+        string result = (isPal)? "true": "false";   //assign every isPal bool value to result
+            cout<<result<<endl;                     //print result
     }
 }
 
